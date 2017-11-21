@@ -1,0 +1,13 @@
+---
+sequence: !!seq
+  - a
+  - b
+mapping: !!map
+  a: 1
+  b: 2
+null value: !!null null
+boolean true: !!bool true
+boolean false: !!bool false
+integer: !!int 42
+string: !!str string
+

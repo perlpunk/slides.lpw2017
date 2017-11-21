@@ -1,0 +1,6 @@
+---
+# An explicit Dice object
+- !Dice [3, 6]
+
+# Recognize and create Dice object from Regex / \d d \d /
+- 3d6

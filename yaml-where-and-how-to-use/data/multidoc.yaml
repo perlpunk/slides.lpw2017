@@ -1,0 +1,13 @@
+---
+# mapping
+a: 1
+b: 2
+...
+# Next document
+---
+- a
+- list
+...
+# a plain scalar can even start
+# on the same line as the header
+--- a simple scalar

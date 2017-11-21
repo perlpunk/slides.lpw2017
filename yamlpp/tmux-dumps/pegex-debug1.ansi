@@ -1,0 +1,29 @@
+   got_EOL
+  got_street_line
+  try_city_line                  >  Niceville\n  OK\n<
+   try_indent                     >  Niceville\n  OK\n<
+   got_indent
+   try_city                       >Niceville\n  OK\n<
+    try_term                       >Niceville\n  OK\n<
+    got_term
+   got_city
+   try_EOL                        >\n  OK\n<
+   got_EOL
+  got_city_line
+  try_country_line               >  OK\n<
+   try_indent                     >  OK\n<
+   got_indent
+   try_country                    >OK\n<
+    try_term                       >OK\n<
+    got_term
+   got_country
+   try_EOL                        >\n<
+   got_EOL
+  got_country_line
+ got_address_section
+got_contact
+test/sample.t .. ok
+[32mAll tests successful.
+[39mFiles=1, Tests=1,  0 wallclock secs ( 0.02 usr  0.00 sys +  0.04 cusr  0.00 csys =  0.06 CPU)
+Result: PASS
+%

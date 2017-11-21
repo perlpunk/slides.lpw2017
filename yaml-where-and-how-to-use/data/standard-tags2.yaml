@@ -1,0 +1,12 @@
+---
+sequence:
+  - a
+  - b
+mapping:
+  a: 1
+  b: 2
+null value: null
+boolean true: true
+boolean false: false
+integer: 42
+string: string

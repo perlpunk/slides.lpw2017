@@ -1,0 +1,466 @@
+---
+title: YAML™ - Where and How to Use?
+content: |
+  [title][/title]
+  [list]
+  [*]Where: London Perl Workshop
+  [*]When: November 25th 2017
+  [*]Author: Tina Müller
+  [/list]
+---
+title: About Me
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]I wrote my first perl code in 1998...
+  [*](...after having learned Java at university), and then I knew where I belonged
+  [*]I was hanging around in Usenet, IRC, at perlmonks and perl-community.de
+  [*]At the perl QA Hackathon 2015 I met Ingy
+  [*]Since then, we've been hacking together on Bash and Perl stuff
+  [*]I had been using YAML regularly, but really got into it in 2016
+  [/list]
+
+---
+title: What's YAML?
+content: |
+
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]A data serialization language
+  [*]But in reality it's also a configuration language
+  [*]But let's first talk about JSON, you will see later why
+  [/list]
+
+---
+title: What's JSON?
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]You have Arrays, Objects (Mappings), Strings, Numbers, null and booleans
+  [*]Strings are always enclosed in double quotes
+  [*]And that's basically all you need to know!
+  [/list]
+  [codebox][include="1.json.html"]
+  [/codebox]
+
+---
+title: What's NOT JSON?
+content: |
+  [title][/title]
+
+  [codebox animation="1,strike"][comment]Comments?[/comment]
+
+
+  {
+    // not public information
+    "weight": null
+  }
+  [/codebox]
+  [codebox animation="2,strike"][comment]Trailing commas?[/comment]
+
+
+  {
+    "age": 99,
+    "weight": null,
+  }
+  [/codebox]
+  [codebox animation="3,strike"][comment]Multiline?[/comment]
+  {
+    "street": "A really long street
+               address that should be
+               multiline
+               for readability"
+  }
+  [/codebox]
+
+---
+title: Compare Formats
+content: |
+  [title][/title]
+  [codebox][comment]JSON[/comment]
+
+  [include="1.json.html"]
+  [/codebox]
+  [codebox animation="10,appear"][comment]XML[/comment]
+
+  [include="1.xml"]
+  [/codebox]
+  [codebox animation="11,appear"][comment]YAML[/comment]
+
+  [include="1.yaml.html"]
+  [/codebox]
+
+---
+title: YAML
+content: |
+  [title][/title]
+
+  [list animation="1,greyin"]
+  [*]YAML is indentation based
+  [*]You have Sequences, Mappings, Strings, Numbers, null and booleans
+  [*]You don't have to quote strings (in most cases)
+  [*]You have comments
+  [*]That's it?
+  [*]No!
+  [/list]
+
+---
+title: Multiline Strings
+content: |
+  [title][/title]
+  [codebox][comment]Github OpenAPI Example, Block Scalars[/comment]
+
+  [include="multi1.yaml.html"]
+  [/codebox]
+  [codebox][comment]Quoted[/comment]
+
+  [include="multi2.yaml.html"]
+
+  [/codebox]
+
+---
+title: Multiple Documents
+content: |
+  [title][/title]
+
+  [list]
+  [*]YAML is a Stream of documents:
+  [/list]
+  [codebox]
+  use YAML::XS qw/ LoadFile /;
+
+  my @documents = LoadFile($file);
+
+
+
+
+
+
+
+
+
+
+
+
+  [/codebox]
+
+  [codebox]
+  [include="multidoc.yaml.html"]
+  [/codebox]
+
+---
+title: Flow Style
+content: |
+  [title][/title]
+
+  [list]
+  [*]A YAML file I use for testing my App::Spec commandline tool:
+  [/list]
+  [codebox][include="test.yaml.html"]
+  [/codebox]
+  [codebox animation="1,appear"][include="test2.yaml.html"]
+  [/codebox]
+
+---
+title: Flow Style
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]In fact, the JSON example I showed at the beginning is actually valid YAML!
+  [*]Just that we can make it a bit more readable
+  [/list]
+  [codebox animation="2,appear"][comment]JSON & YAML[/comment]
+
+  [include="1.json.html"]
+
+  [/codebox]
+  [codebox animation="3,appear"][comment]YAML[/comment]
+  [include="json.yaml.html"]
+
+  [/codebox]
+
+---
+title: Aliases & Anchors
+content: |
+  [title][/title]
+
+  [list animation="1,greyin"]
+  [*]Not many people know and use Aliases
+  [*]But they can come in quite handy sometimes
+  [*]And they are really easy to understand
+  [*]They are simply like references in Perl!
+  [*]Imagine we write an API and want to return the list of comments for a Pull Request
+  [/list]
+
+---
+title: Aliases & Anchors - API example - Perl
+content: |
+  [title][/title]
+  [codebox animation="1,appear"]
+  [include="ref.pl"]
+  [/codebox]
+
+---
+title: Aliases & Anchors - API example - Output
+content: |
+  [title][/title]
+  [codebox animation="1,appear"][comment]JSON[/comment]
+  [include="ref.json.html"][/codebox]
+  [codebox animation="2,appear"][comment]YAML[/comment]
+  [include="ref.yaml.html"][/codebox]
+
+---
+title: Aliases & Anchors
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]Aliases are a really nice feature for serialization
+  [*]You can even serialize cyclic structures
+  [*]In config files you can save space and time by keeping repeated data
+  only at one place
+  [*]What else can be useful for serialization?
+  [/list]
+
+---
+title: Tags
+content: |
+  [title][/title]
+
+  [list animation="1,greyin"]
+  [*]Every node in a YAML document can have a tag
+  [*]In Perl think Classes and Datatypes
+  [*]In YAML think Tags
+  [*]When loading YAML, you need a Schema to resolve the Tags into Classes and datatypes
+  [/list]
+
+---
+title: Standard Tags (for YAML 1.2 JSON Schema)
+content: |
+  [title][/title]
+
+  [list animation="1,greyin"]
+  [*]There are standard tags that actually are implicit
+  [*]So the following documents are equal
+  [/list]
+  [codebox animation="5,appear"][include="standard-tags1.yaml.html"][/codebox]
+  [codebox animation="5,appear"][include="standard-tags2.yaml.html"]
+  [/codebox]
+
+
+---
+title: Generic Object Tags
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]Most YAML processors implement generic Tags for Object serialization
+  [/list]
+  [codebox animation="5,appear"][include="generic-objects.yaml.html"][/codebox]
+
+
+---
+title: Local Tags
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]Tags with one ! are called local tags
+  [*]In Perl Loaders, they are loaded into classes also
+  [/list]
+  [codebox animation="5,appear"][include="local-objects.yaml.html"][/codebox]
+
+---
+title: YAML Usage
+content: |
+  [title][/title]
+
+  [list animation="1,greyin"]
+  [*]You can use YAML for:
+  [*]Config files with hierarchical data
+  [*]Serializing just about any data including References and Objects
+  [*]Debugging output for perl objects
+  [*]Data for tests
+  [*]API specifications
+  [*]Data exchange (APIs, ...)
+  [*]Great! But...
+  [/list]
+
+---
+title: Perl YAML Processors
+content: |
+  [title][/title]
+
+  [list animation="1,greyin"]
+  [*]All the Perl Modules behave slightly different
+  [*]I'll show you:
+  [*]YAML.pm
+  [*]YAML::Syck
+  [*]YAML::XS
+  [*]YAML::Tiny
+  [*]YAML::PP
+  [/list]
+---
+title: Some notes about booleans
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]Most JSON processors will load Booleans into JSON::PP::Boolean objects
+  [/list]
+  [codebox animation="5,appear"][include="boolean.json.html"]
+  
+  
+  
+  
+  
+  [/codebox]
+  [codebox animation="6,appear"][include="boolean.pl.html"][/codebox]
+
+---
+title: YAML and Booleans
+content: |
+  [title][/title]
+
+  [codebox animation="5,flyin"][include="boolean-yaml.pl"][/codebox]
+  [br]
+  [codebox animation="6,flyin"][include="boolean-yaml-syck.pl"][/codebox]
+  [br]
+  [codebox animation="7,flyin"][include="boolean-yaml-xs.pl"][/codebox]
+  [br]
+  [codebox animation="8,flyin"][include="boolean-yaml-pp.pl"][/codebox]
+
+
+---
+title: YAML.pm
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]Bad news first:
+  [*]YAML.pm is based on YAML 1.0
+  [*]YAML.pm has various problems with YAML 1.1/1.2 syntax
+  [*]Can't parse trailing comments (I have a patch for that, though)
+  [*]Can't parse nested sequence on the same line
+  [*]Can't parse zero indented sequences
+  [*]Can't do multiline quoted strings
+  [*]It doesn't know booleans
+  [*]Has problems with some block scalars
+  [/list]
+
+---
+title: YAML.pm
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]Now for the good news:
+  [*]It has several options
+  [*]$YAML::Preserve: Preserve key order when Load()ing and Dump()ing
+  [*]$YAML::Indent: Specify how many spaces when Dump()ing
+  [*]$YAML::Sortkeys: Sort keys when Dump()ing
+  [*]$YAML::UseCode: Serialize code refs
+  [*]$YAML::Numify: Numify integers when Load()ing
+  [*]...and more
+  [/list]
+
+---
+title: YAML::XS
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]Based on libyaml, which implements YAML 1.1
+  [*]libyaml doesn't implement the full spec, but most common cases should be covered
+  [*]Only plain 'true'/'false' are recognized as booleans
+  [*]Can do Boolean objects since v0.67
+  [*]Doesn't have many options
+  [*]Mapping keys are sorted when Dump()ing
+  [/list]
+
+
+---
+title: YAML::Syck
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]Based on libsyck, implementing YAML 1.0
+  [*]Can parse a bit more than YAML.pm
+  [*]Segfaults sometimes
+  [*]$YAML::Syck::SortKeys
+  [*]$YAML::Syck::SingleQuote: Always use singlequotes when Dump()ing
+  [*]$YAML::Syck::UseCode
+  [*]...and more
+  [/list]
+
+---
+title: YAML::Tiny
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]Small subset of YAML
+  [*]No Aliases/Anchors
+  [*]No Booleans
+  [*]No multiline quoted strings
+  [*]But it's fast!
+  [/list]
+
+---
+title: YAML::PP
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]I started this at New Year's Day 2017
+  [*]Still can't fully parse YAML 1.2
+  [*]But already parses more test cases than all other Perl Modules
+  [*]All the highlighted YAML you saw in this talk was highlighted with YAML::PP
+  [*]I'll show more about it in my lightning talk
+  [/list]
+
+---
+title: YAML Test Suite
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]In 2016, Ingy started [url=https://github.com/yaml/yaml-test-suite]yaml/yaml-test-suite[/url]
+  [*]Today, it contains about 270 test cases in a language agnostic format
+  [*]It aims at YAML 1.2, and at some point 1.3
+  [*]We want future parsers to all behave in the same way
+  [/list]
+
+---
+title: YAML Test Matrix
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]When I started YAML::PP, I wanted to know how many tests all other processors parse
+  [*]With the Docker Image from Ingy's [url=https://github.com/yaml/yaml-editor]YAML Editor[/url] I ran all the tests
+  [*]...and created this matrix:
+  [/list]
+
+---
+title: YAML Test Matrix Overview
+content: |
+  [title][/title]
+
+  [h1][img=yaml-test-matrix-overview.png][/img][/h1]
+
+---
+title: YAML Test Matrix - Valid Tests
+content: |
+  [title][/title]
+
+  [h1][img=yaml-test-matrix-valid.png][/img][/h1]
+
+---
+title: Questions?
+content: |
+  [title][/title]
+  [h1][img=sponsors.png][/img][/h1]
+
+---
+title: Thanks!
+content: |
+  [title][/title]
+
+
+  [list]
+  [*]Tina's Github Profile: [url=https://github.com/perlpunk]https://github.com/perlpunk[/url]
+  [*]YAML Test Suite: [url=https://github.com/yaml/yaml-test-suite]https://github.com/yaml/yaml-test-suite[/url]
+  [*]YAML Editor: [url=https://github.com/yaml/yaml-editor]https://github.com/yaml/yaml-editor[/url]
+  [*]YAML::PP: [url=https://metacpan.org/release/YAML-PP]https://metacpan.org/release/YAML-PP[/url]
+  [*]YAML Test Matrix: [url=https://github.com/perlpunk/yaml-test-matrix]https://github.com/perlpunk/yaml-test-matrix[/url]
+  [/list]

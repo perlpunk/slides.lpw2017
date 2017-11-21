@@ -1,0 +1,21 @@
+---
+-
+  args: [ mysimpleapp, -h ]
+  # ^---- Flow style sequence
+
+  stdout:
+  - regex: 'Usage: mysimpleapp \[options\]'
+  exit: 0
+-
+  args: [ myapp, cook, tea, --sugar, -vv, --verbose ]
+  # ^---- Flow style sequence
+
+
+
+
+
+  stdout:
+    - regex: 'Options: sugar=1,verbose=3'
+    - regex: 'Parameters: drink=tea'
+    - regex: 'Subcommands: cook'
+  exit: 0

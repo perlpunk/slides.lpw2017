@@ -1,0 +1,22 @@
+% [32mgit[39m hub pr-queue andk -c 5
+andk/pause
+#241 (open)   remove more mmods stuff related to #240/#187
+     @charsbar     Created: 2017-05-14  Updated: 2017-06-17
+     https://github.com/andk/pause/pull/241
+andk/cpanpm
+#113 (open)   Under -x, make it work for more than one typo
+     @Tux          Created: 2017-05-11  Updated: 2017-05-11
+     https://github.com/andk/cpanpm/pull/113
+andk/cpanpm
+#109 (open)   add support for cperl and fixed YAML::XS
+     @rurban       Created: 2017-02-17  Updated: 2017-02-17
+     https://github.com/andk/cpanpm/pull/109
+andk/cpanpm
+#107 (open)   Update MANIFEST file as reported by CPANTS.
+     @manwar       Created: 2017-01-16  Updated: 2017-01-16
+     https://github.com/andk/cpanpm/pull/107
+andk/cpanpm
+#105 (open)   Fix for rt #116507: relative paths with cpan -j
+     @briandfoy    Created: 2016-10-18  Updated: 2016-10-18
+     https://github.com/andk/cpanpm/pull/105
+%

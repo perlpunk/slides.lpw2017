@@ -1,0 +1,21 @@
+/feeds:
+  get:
+    # Doublequoted
+    description: "
+      This will
+      be folded
+
+      and empty lines create newlines.
+      You can use escapes like \t here"
+
+    parameters:
+        # Singlequoted
+      - description: '
+          This will
+          be folded
+
+          and empty lines
+          create newlines'
+        in: header
+        name: X-GitHub-Media-Type
+        type: string

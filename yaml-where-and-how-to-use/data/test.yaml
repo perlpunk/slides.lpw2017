@@ -1,0 +1,21 @@
+---
+-
+  args:
+  - mysimpleapp  # <--- Block style sequence
+  - -h
+  stdout:
+  - regex: 'Usage: mysimpleapp \[options\]'
+  exit: 0
+-
+  args:
+  - myapp        # <--- Block style sequence
+  - cook
+  - tea
+  - --sugar
+  - -vv
+  - --verbose
+  stdout:
+    - regex: 'Options: sugar=1,verbose=3'
+    - regex: 'Parameters: drink=tea'
+    - regex: 'Subcommands: cook'
+  exit: 0

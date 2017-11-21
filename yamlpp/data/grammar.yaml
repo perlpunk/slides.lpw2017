@@ -1,0 +1,19 @@
+  PLAIN:
+    match: cb_start_plain          # <--- Callback
+    COMMENT:
+      match: cb_send_scalar        # <--- Callback
+      EOL: { return: 1 }
+    EOL:
+      match: cb_fetch_tokens_plain # <--- Callback
+      new: RULE_PLAIN_MULTI
+    WS:
+      COLON:
+        match: cb_insert_map       # <--- Callback
+        EOL: { node: FULLNODE , return: 1}
+        WS: { node: FULLMAPVALUE_INLINE, return: 1 }
+    COLON:
+      match: cb_insert_map         # <--- Callback
+      EOL: { node: FULLNODE , return: 1}
+      WS: { node: FULLMAPVALUE_INLINE, return: 1 }
+
+  COLON:

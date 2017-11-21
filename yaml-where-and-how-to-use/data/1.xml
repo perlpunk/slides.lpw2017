@@ -1,0 +1,18 @@
+&lt;person&gt;
+  &lt;firstName&gt;Kim&lt;/firstName&gt;
+  &lt;lastName&gt;Smith&lt;/lastName&gt;
+  &lt;age&gt;99&lt;/age&gt;
+  &lt;old&gt;true&lt;/old&gt;
+  &lt;weight&gt;null&lt;/weight&gt;
+  &lt;address&gt;
+    &lt;street&gt;21 Jump Street&lt;/street&gt;
+    &lt;city&gt;New York&lt;/city&gt;
+    &lt;postalCode&gt;10021&lt;/postalCode&gt;
+  &lt;/address&gt;
+  &lt;phoneNumber&gt;
+    &lt;type&gt;home&lt;/type&gt;
+    &lt;number&gt;212 555-1234&lt;/number&gt;
+  &lt;/phoneNumber&gt;
+&lt;/person&gt;
+
+

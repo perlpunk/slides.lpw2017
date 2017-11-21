@@ -1,0 +1,29 @@
+   [92mgot_EOL
+[39m  [92mgot_street_line
+[39m  try_city_line                  >  Niceville\n  OK\n<
+   try_indent                     >  Niceville\n  OK\n<
+   [92mgot_indent
+[39m   try_city                       >Niceville\n  OK\n<
+    try_term                       >Niceville\n  OK\n<
+    [92mgot_term
+[39m   [92mgot_city
+[39m   try_EOL                        >\n  OK\n<
+   [92mgot_EOL
+[39m  [92mgot_city_line
+[39m  try_country_line               >  OK\n<
+   try_indent                     >  OK\n<
+   [92mgot_indent
+[39m   try_country                    >OK\n<
+    try_term                       >OK\n<
+    [92mgot_term
+[39m   [92mgot_country
+[39m   try_EOL                        >\n<
+   [92mgot_EOL
+[39m  [92mgot_country_line
+[39m [92mgot_address_section
+got_contact
+[39mtest/sample.t .. ok
+[32mAll tests successful.
+[39mFiles=1, Tests=1,  0 wallclock secs ( 0.01 usr  0.00 sys +  0.04 cusr  0.00 csys =  0.05 CPU)
+Result: PASS
+%

@@ -1,0 +1,26 @@
+[
+   {
+      "content" : "comment 1",
+      "date" : 1234567,
+      "id" : 1,
+      "user" : {
+         "followers" : 99,
+         "fullname" : "...",
+         "id" : 1001,
+         "nick" : "UserA",
+         "repos" : 23
+      }
+   },
+   {
+      "content" : "comment 2",
+      "date" : 1234567,
+      "id" : 2,
+      "user" : {
+         "followers" : 99,
+         "fullname" : "...",
+         "id" : 1001,
+         "nick" : "UserA",
+         "repos" : 23
+      }
+   }
+]

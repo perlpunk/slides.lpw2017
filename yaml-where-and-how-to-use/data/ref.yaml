@@ -1,0 +1,26 @@
+---
+
+- content: comment 1
+  date: 1234567
+  id: 1
+  user: &1      # <---- Anchor with name '1'
+                # points at the mapping right below
+    followers: 99
+    fullname: '...'
+    id: 1001
+    nick: UserA
+    repos: 23
+
+
+- content: comment 2
+  date: 1234567
+  id: 2
+  user: *1      # Alias (Reference) to anchor '1'
+
+# Loading back into Perl it will recreate
+# a structure with references
+
+
+
+
+

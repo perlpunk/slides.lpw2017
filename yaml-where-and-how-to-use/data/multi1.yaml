@@ -1,0 +1,22 @@
+/feeds:
+  get:
+    # "Folded" Block Scalar
+    description: >
+      List Feeds.
+
+      GitHub provides several
+      timeline resources in Atom
+      format. The Feeds API
+      lists all the feeds
+      available to the
+      authenticating user.
+    parameters:
+      # Literal Block Scalar
+      - description: |
+          This will preserve any newlines
+
+          and trailing spaces  
+
+        in: header
+        name: X-GitHub-Media-Type
+        type: string

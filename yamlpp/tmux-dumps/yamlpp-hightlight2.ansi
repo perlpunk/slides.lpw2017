@@ -1,0 +1,15 @@
+% [32myamlpp5-highlight[39m [4mdata/invalid.yaml
+[0;1m---
+[35m-[0;39m list
+[1;35m-[0;39m items
+[1;35m-[0;39m key 1[1;35m:[0;39m one
+  key 2[1;35m:[0;39m two
+[1;35m-[0;39m [1;35m[[0;39m flow[1;35m,[0;39m sequence [1;31m}
+- [ another ]
+
+[0;39mLine      : 6
+Message   : Expected (EOL FLOWSEQ_END FLOW_COMMA WS), but got FLOWMAP_END
+Where     : /home/tina/develop/github/YAML-PP-p5/lib/YAML/PP/Parser.pm line 487
+YAML      : "}"
+  at /home/tina/develop/github/YAML-PP-p5/lib/YAML/PP/Loader.pm line 52.
+%

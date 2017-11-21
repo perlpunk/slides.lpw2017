@@ -1,0 +1,7 @@
+---
+- list
+- items
+- key 1: one
+  key 2: two
+- [ flow, sequence }
+- [ another ]
