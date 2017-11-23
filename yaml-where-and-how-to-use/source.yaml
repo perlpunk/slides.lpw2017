@@ -215,7 +215,7 @@ content: |
   [title][/title]
   [list animation="1,greyin"]
   [*]Aliases are a really nice feature for serialization
-  [*]You can even serlialize cyclic structures
+  [*]You can even serialize cyclic structures
   [*]In config files you can save space and time by keeping repeated data
   only at one place
   [*]What else can be useful for serialization?
@@ -290,11 +290,12 @@ content: |
 
   [list animation="1,greyin"]
   [*]All the Perl Modules behave slightly different
-  [*]YAML.pm:[br] Based on YAML 1.0 and has lots of problems with valid 1.1/1.2 syntax
-  [*]YAML::Syck:[br] Based on libsyck/YAML 1.0 and also has problems, including segfaults
-  [*]YAML::XS:[br] Based on libyaml/YAML 1.1 and will handle most YAML 1.1/1.2
-  [*]YAML::Tiny:[br] Implements a subset of YAML (1.0/1.1?)
-  [*]YAML::PP:[br] Aims for YAML 1.2, but is still in development
+  [*]I'll show you:
+  [*]YAML.pm
+  [*]YAML::Syck
+  [*]YAML::XS
+  [*]YAML::Tiny
+  [*]YAML::PP
   [/list]
 ---
 title: Some notes about booleans
@@ -332,6 +333,7 @@ content: |
   [title][/title]
   [list animation="1,greyin"]
   [*]Bad news first:
+  [*]YAML.pm is based on YAML 1.0
   [*]YAML.pm has various problems with YAML 1.1/1.2 syntax
   [*]Can't parse trailing comments (I have a patch for that, though)
   [*]Can't parse nested sequence on the same line
