@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-store" />
+<title>Some notes about booleans</title>
+<link rel="prev" href="slide021.html" />
+<link rel="next" href="slide023.html" />
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bbslides.js"></script>
+<script src="js/navi.js"></script>
+<link rel="stylesheet" type="text/css" href="css/slides.css">
+<link rel="stylesheet" type="text/css" href="css/ansicolor.css">
+<link rel="stylesheet" type="text/css" href="css/yaml.css">
+</head>
+
+<body>
+<!--
+<div id="test"></div>
+-->
+<div id="bbslides-slide" class="bbslides-frame">
+<h1 id="node_1" class="bbslides-h1">Some notes about booleans</h1>
+<ul><li id="node_3">Most JSON processors will load Booleans into JSON::PP::Boolean objects</li></ul>
+<div id="node_4" class="codebox"><span class="flowmap_start">{</span><span class="comment">
+</span><span class="indent">    </span><span class="doublequote">&quot;</span><span class="doublequoted">true</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">true</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">    </span><span class="doublequote">&quot;</span><span class="doublequoted">false</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">false</span><span class="comment">
+</span><span class="flowmap_end">}</span><span class="comment">
+</span>
+
+
+
+
+
+
+</div>
+<div id="node_6" class="codebox"><span class="comment"># JSON::XS
+</span><span class="comment"># JSON::PP
+</span><span class="comment"># JSON.pm
+</span><span class="comment"># Cpanel::JSON::XS
+</span><span class="comment"># Mojo::JSON
+</span><span class="default">$VAR1 = {</span><span class="comment">
+</span><span class="indent">          </span><span class="default">&#39;true&#39; =&gt; bless( do{\(my $o = 1)}, &#39;JSON::PP::Boolean&#39; ),</span><span class="comment">
+</span><span class="indent">          </span><span class="default">&#39;false&#39; =&gt; bless( do{\(my $o = 0)}, &#39;JSON::PP::Boolean&#39; )</span><span class="comment">
+</span><span class="indent">        </span><span class="default">};</span><span class="comment">
+</span><span class="comment">
+</span>
+</div>
+</div>
+<script type="text/javascript">
+register_animation('node_3', 2, 'greyin', {});
+register_animation('node_4', 5, 'appear', {});
+register_animation('node_6', 6, 'appear', {});
+
+var prev_page = 'slide021.html';
+var next_page = 'slide023.html';
+</script>
+<div id="bbslides-navi">
+Slide 22/35
+<a href="slide021.html" onclick="previous_step();return false">BACK</a>
+<a href="index.html">UP</a>
+<a href="slide023.html" onclick="next_step(); return false">NEXT</a>
+<span id="usage">next: ( space / -&gt; / page up ) | previous: ( backspace / &lt;- / page down ) |
+next page: ( shift + page down ) | previous page: ( shift + page up ) |
+index: ( arrow-up )</span>
+
+<br>
+<progress id="slide-progress" value="22" max="35"></progress>
+</div>
+</body>
+</html>

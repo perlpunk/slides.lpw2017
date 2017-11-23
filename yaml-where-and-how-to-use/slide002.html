@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-store" />
+<title>About Me</title>
+<link rel="prev" href="slide001.html" />
+<link rel="next" href="slide003.html" />
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bbslides.js"></script>
+<script src="js/navi.js"></script>
+<link rel="stylesheet" type="text/css" href="css/slides.css">
+<link rel="stylesheet" type="text/css" href="css/ansicolor.css">
+<link rel="stylesheet" type="text/css" href="css/yaml.css">
+</head>
+
+<body>
+<!--
+<div id="test"></div>
+-->
+<div id="bbslides-slide" class="bbslides-frame">
+<h1 id="node_1" class="bbslides-h1">About Me</h1>
+<ul><li id="node_3">I wrote my first perl code in 1998...</li><li id="node_4">(...after having learned Java at university), and then I knew where I belonged</li><li id="node_5">I was hanging around in Usenet, IRC, at perlmonks and perl-community.de</li><li id="node_6">At the perl QA Hackathon 2015 I met Ingy</li><li id="node_7">Since then, we&#39;ve been hacking together on Bash and Perl stuff</li><li id="node_8">I had been using YAML regularly, but really got into it in 2016</li></ul>
+</div>
+<script type="text/javascript">
+register_animation('node_3', 2, 'greyin', {});
+register_animation('node_4', 3, 'greyin', {});
+register_animation('node_5', 4, 'greyin', {});
+register_animation('node_6', 5, 'greyin', {});
+register_animation('node_7', 6, 'greyin', {});
+register_animation('node_8', 7, 'greyin', {});
+
+var prev_page = 'slide001.html';
+var next_page = 'slide003.html';
+</script>
+<div id="bbslides-navi">
+Slide 2/35
+<a href="slide001.html" onclick="previous_step();return false">BACK</a>
+<a href="index.html">UP</a>
+<a href="slide003.html" onclick="next_step(); return false">NEXT</a>
+<span id="usage">next: ( space / -&gt; / page up ) | previous: ( backspace / &lt;- / page down ) |
+next page: ( shift + page down ) | previous page: ( shift + page up ) |
+index: ( arrow-up )</span>
+
+<br>
+<progress id="slide-progress" value="2" max="35"></progress>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-store" />
+<title>Multiline Strings</title>
+<link rel="prev" href="slide007.html" />
+<link rel="next" href="slide009.html" />
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bbslides.js"></script>
+<script src="js/navi.js"></script>
+<link rel="stylesheet" type="text/css" href="css/slides.css">
+<link rel="stylesheet" type="text/css" href="css/ansicolor.css">
+<link rel="stylesheet" type="text/css" href="css/yaml.css">
+</head>
+
+<body>
+<!--
+<div id="test"></div>
+-->
+<div id="bbslides-slide" class="bbslides-frame">
+<h1 id="node_1" class="bbslides-h1">Multiline Strings</h1>
+<div id="node_2" class="codebox"><span id="node_3" class="bbslides-comment">Github OpenAPI Example, Block Scalars</span>
+
+<span class="default">/feeds</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">get</span><span class="colon">:</span><span class="comment">
+</span><span class="comment">    # &quot;Folded&quot; Block Scalar
+</span><span class="indent">    </span><span class="default">description</span><span class="colon">:</span><span class="default"> </span><span class="folded">&gt;</span><span class="comment">
+</span><span class="indent">      </span><span class="block_scalar_content">List Feeds.</span><span class="comment">
+</span><span class="comment">
+</span><span class="indent">      </span><span class="block_scalar_content">GitHub provides several</span><span class="comment">
+</span><span class="indent">      </span><span class="block_scalar_content">timeline resources in Atom</span><span class="comment">
+</span><span class="indent">      </span><span class="block_scalar_content">format. The Feeds API</span><span class="comment">
+</span><span class="indent">      </span><span class="block_scalar_content">lists all the feeds</span><span class="comment">
+</span><span class="indent">      </span><span class="block_scalar_content">available to the</span><span class="comment">
+</span><span class="indent">      </span><span class="block_scalar_content">authenticating user.</span><span class="comment">
+</span><span class="indent">    </span><span class="default">parameters</span><span class="colon">:</span><span class="comment">
+</span><span class="comment">      # Literal Block Scalar
+</span><span class="indent">      </span><span class="dash">-</span><span class="default"> </span><span class="default">description</span><span class="colon">:</span><span class="default"> </span><span class="literal">|</span><span class="comment">
+</span><span class="indent">          </span><span class="block_scalar_content">This will preserve any newlines</span><span class="comment">
+</span><span class="comment">
+</span><span class="indent">          </span><span class="block_scalar_content">and trailing spaces  </span><span class="comment">
+</span><span class="comment">
+</span><span class="indent">        </span><span class="default">in</span><span class="colon">:</span><span class="default"> </span><span class="default">header</span><span class="comment">
+</span><span class="indent">        </span><span class="default">name</span><span class="colon">:</span><span class="default"> </span><span class="default">X-GitHub-Media-Type</span><span class="comment">
+</span><span class="indent">        </span><span class="default">type</span><span class="colon">:</span><span class="default"> </span><span class="default">string</span><span class="comment">
+</span>
+
+</div>
+<div id="node_5" class="codebox"><span id="node_6" class="bbslides-comment">Quoted</span>
+
+<span class="default">/feeds</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">get</span><span class="colon">:</span><span class="comment">
+</span><span class="comment">    # Doublequoted
+</span><span class="indent">    </span><span class="default">description</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="doublequoted">      This will</span><span class="comment">
+</span><span class="doublequoted">      be folded</span><span class="comment">
+</span><span class="comment">
+</span><span class="doublequoted">      and empty lines create newlines.</span><span class="comment">
+</span><span class="doublequoted">      You can use escapes like \t here</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="comment">
+</span><span class="indent">    </span><span class="default">parameters</span><span class="colon">:</span><span class="comment">
+</span><span class="comment">        # Singlequoted
+</span><span class="indent">      </span><span class="dash">-</span><span class="default"> </span><span class="default">description</span><span class="colon">:</span><span class="default"> </span><span class="singlequote">&#39;</span><span class="comment">
+</span><span class="singlequoted">          This will</span><span class="comment">
+</span><span class="singlequoted">          be folded</span><span class="comment">
+</span><span class="comment">
+</span><span class="singlequoted">          and empty lines</span><span class="comment">
+</span><span class="singlequoted">          create newlines</span><span class="singlequote">&#39;</span><span class="comment">
+</span><span class="indent">        </span><span class="default">in</span><span class="colon">:</span><span class="default"> </span><span class="default">header</span><span class="comment">
+</span><span class="indent">        </span><span class="default">name</span><span class="colon">:</span><span class="default"> </span><span class="default">X-GitHub-Media-Type</span><span class="comment">
+</span><span class="indent">        </span><span class="default">type</span><span class="colon">:</span><span class="default"> </span><span class="default">string</span><span class="comment">
+</span>
+
+
+</div>
+</div>
+<script type="text/javascript">
+
+var prev_page = 'slide007.html';
+var next_page = 'slide009.html';
+</script>
+<div id="bbslides-navi">
+Slide 8/35
+<a href="slide007.html" onclick="previous_step();return false">BACK</a>
+<a href="index.html">UP</a>
+<a href="slide009.html" onclick="next_step(); return false">NEXT</a>
+<span id="usage">next: ( space / -&gt; / page up ) | previous: ( backspace / &lt;- / page down ) |
+next page: ( shift + page down ) | previous page: ( shift + page up ) |
+index: ( arrow-up )</span>
+
+<br>
+<progress id="slide-progress" value="8" max="35"></progress>
+</div>
+</body>
+</html>

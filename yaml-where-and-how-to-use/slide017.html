@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-store" />
+<title>Standard Tags (for YAML 1.2 JSON Schema)</title>
+<link rel="prev" href="slide016.html" />
+<link rel="next" href="slide018.html" />
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bbslides.js"></script>
+<script src="js/navi.js"></script>
+<link rel="stylesheet" type="text/css" href="css/slides.css">
+<link rel="stylesheet" type="text/css" href="css/ansicolor.css">
+<link rel="stylesheet" type="text/css" href="css/yaml.css">
+</head>
+
+<body>
+<!--
+<div id="test"></div>
+-->
+<div id="bbslides-slide" class="bbslides-frame">
+<h1 id="node_1" class="bbslides-h1">Standard Tags (for YAML 1.2 JSON Schema)</h1>
+
+<ul><li id="node_3">There are standard tags that actually are implicit</li><li id="node_4">So the following documents are equal</li></ul>
+<div id="node_5" class="codebox"><span class="doc_start">---</span><span class="comment">
+</span><span class="default">sequence</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!seq</span><span class="comment">
+</span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span><span class="default">mapping</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!map</span><span class="comment">
+</span><span class="indent">  </span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="comment">
+</span><span class="indent">  </span><span class="default">b</span><span class="colon">:</span><span class="default"> </span><span class="default">2</span><span class="comment">
+</span><span class="default">null value</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!null</span><span class="default"> </span><span class="default">null</span><span class="comment">
+</span><span class="default">boolean true</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!bool</span><span class="default"> </span><span class="default">true</span><span class="comment">
+</span><span class="default">boolean false</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!bool</span><span class="default"> </span><span class="default">false</span><span class="comment">
+</span><span class="default">integer</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!int</span><span class="default"> </span><span class="default">42</span><span class="comment">
+</span><span class="default">string</span><span class="colon">:</span><span class="default"> </span><span class="tag">!!str</span><span class="default"> </span><span class="default">string</span><span class="comment">
+</span><span class="comment">
+</span>
+</div>
+<div id="node_7" class="codebox"><span class="doc_start">---</span><span class="comment">
+</span><span class="default">sequence</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">a</span><span class="comment">
+</span><span class="indent">  </span><span class="dash">-</span><span class="default"> </span><span class="default">b</span><span class="comment">
+</span><span class="default">mapping</span><span class="colon">:</span><span class="comment">
+</span><span class="indent">  </span><span class="default">a</span><span class="colon">:</span><span class="default"> </span><span class="default">1</span><span class="comment">
+</span><span class="indent">  </span><span class="default">b</span><span class="colon">:</span><span class="default"> </span><span class="default">2</span><span class="comment">
+</span><span class="default">null value</span><span class="colon">:</span><span class="default"> </span><span class="default">null</span><span class="comment">
+</span><span class="default">boolean true</span><span class="colon">:</span><span class="default"> </span><span class="default">true</span><span class="comment">
+</span><span class="default">boolean false</span><span class="colon">:</span><span class="default"> </span><span class="default">false</span><span class="comment">
+</span><span class="default">integer</span><span class="colon">:</span><span class="default"> </span><span class="default">42</span><span class="comment">
+</span><span class="default">string</span><span class="colon">:</span><span class="default"> </span><span class="default">string</span><span class="comment">
+</span>
+
+</div>
+</div>
+<script type="text/javascript">
+register_animation('node_3', 2, 'greyin', {});
+register_animation('node_4', 3, 'greyin', {});
+register_animation('node_5', 5, 'appear', {});
+register_animation('node_7', 5, 'appear', {});
+
+var prev_page = 'slide016.html';
+var next_page = 'slide018.html';
+</script>
+<div id="bbslides-navi">
+Slide 17/35
+<a href="slide016.html" onclick="previous_step();return false">BACK</a>
+<a href="index.html">UP</a>
+<a href="slide018.html" onclick="next_step(); return false">NEXT</a>
+<span id="usage">next: ( space / -&gt; / page up ) | previous: ( backspace / &lt;- / page down ) |
+next page: ( shift + page down ) | previous page: ( shift + page up ) |
+index: ( arrow-up )</span>
+
+<br>
+<progress id="slide-progress" value="17" max="35"></progress>
+</div>
+</body>
+</html>

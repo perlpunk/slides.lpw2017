@@ -1,0 +1,94 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-store" />
+<title>Flow Style</title>
+<link rel="prev" href="slide010.html" />
+<link rel="next" href="slide012.html" />
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bbslides.js"></script>
+<script src="js/navi.js"></script>
+<link rel="stylesheet" type="text/css" href="css/slides.css">
+<link rel="stylesheet" type="text/css" href="css/ansicolor.css">
+<link rel="stylesheet" type="text/css" href="css/yaml.css">
+</head>
+
+<body>
+<!--
+<div id="test"></div>
+-->
+<div id="bbslides-slide" class="bbslides-frame">
+<h1 id="node_1" class="bbslides-h1">Flow Style</h1>
+<ul><li id="node_3">In fact, the JSON example I showed at the beginning is actually valid YAML!</li><li id="node_4">Just that we can make it a bit more readable</li></ul>
+<div id="node_5" class="codebox"><span id="node_6" class="bbslides-comment">JSON &amp; YAML</span>
+
+<span class="flowmap_start">{</span><span class="comment">
+</span><span class="indent">  </span><span class="doublequote">&quot;</span><span class="doublequoted">firstName</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Kim</span><span class="doublequote">&quot;</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">  </span><span class="doublequote">&quot;</span><span class="doublequoted">lastName</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">Smith</span><span class="doublequote">&quot;</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">  </span><span class="doublequote">&quot;</span><span class="doublequoted">age</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">99</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">  </span><span class="doublequote">&quot;</span><span class="doublequoted">old</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">true</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">  </span><span class="doublequote">&quot;</span><span class="doublequoted">weight</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="default">null</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">  </span><span class="doublequote">&quot;</span><span class="doublequoted">address</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="flowmap_start">{</span><span class="comment">
+</span><span class="indent">    </span><span class="doublequote">&quot;</span><span class="doublequoted">street</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">21 Jump Street</span><span class="doublequote">&quot;</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">    </span><span class="doublequote">&quot;</span><span class="doublequoted">city</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">New York</span><span class="doublequote">&quot;</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">    </span><span class="doublequote">&quot;</span><span class="doublequoted">postalCode</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">10021</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="indent">  </span><span class="flowmap_end">}</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">  </span><span class="doublequote">&quot;</span><span class="doublequoted">phoneNumber</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="flowseq_start">[</span><span class="comment">
+</span><span class="indent">    </span><span class="flowmap_start">{</span><span class="comment">
+</span><span class="indent">      </span><span class="doublequote">&quot;</span><span class="doublequoted">type</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">home</span><span class="doublequote">&quot;</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">      </span><span class="doublequote">&quot;</span><span class="doublequoted">number</span><span class="doublequote">&quot;</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">212 555-1234</span><span class="doublequote">&quot;</span><span class="comment">
+</span><span class="indent">    </span><span class="flowmap_end">}</span><span class="comment">
+</span><span class="indent">  </span><span class="flowseq_end">]</span><span class="comment">
+</span><span class="flowmap_end">}</span><span class="comment">
+</span>
+
+
+</div>
+<div id="node_8" class="codebox"><span id="node_9" class="bbslides-comment">YAML</span>
+<span class="comment"># Comments!
+</span><span class="flowmap_start">{</span><span class="comment">
+</span><span class="indent">  </span><span class="default">firstName</span><span class="colon">:</span><span class="default"> </span><span class="default">Kim</span><span class="flow_comma">,</span><span class="comment">   # No Quotes!
+</span><span class="indent">  </span><span class="default">lastName</span><span class="colon">:</span><span class="default"> </span><span class="default">Smith</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">  </span><span class="default">age</span><span class="colon">:</span><span class="default"> </span><span class="default">99</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">  </span><span class="default">old</span><span class="colon">:</span><span class="default"> </span><span class="default">true</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">  </span><span class="default">weight</span><span class="colon">:</span><span class="default"> </span><span class="default">null</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">  </span><span class="default">address</span><span class="colon">:</span><span class="default"> </span><span class="flowmap_start">{</span><span class="comment">
+</span><span class="indent">    </span><span class="default">street</span><span class="colon">:</span><span class="default"> </span><span class="default">21 Jump Street</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">    </span><span class="default">city</span><span class="colon">:</span><span class="default"> </span><span class="default">New York</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">    </span><span class="default">postalCode</span><span class="colon">:</span><span class="default"> </span><span class="doublequote">&quot;</span><span class="doublequoted">10021</span><span class="doublequote">&quot;</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">  </span><span class="flowmap_end">}</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">  </span><span class="default">phoneNumber</span><span class="colon">:</span><span class="default"> </span><span class="flowseq_start">[</span><span class="comment">
+</span><span class="indent">    </span><span class="flowmap_start">{</span><span class="comment">
+</span><span class="indent">      </span><span class="default">type</span><span class="colon">:</span><span class="default"> </span><span class="default">home</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">      </span><span class="default">number</span><span class="colon">:</span><span class="default"> </span><span class="default">212 555-1234</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">    </span><span class="flowmap_end">}</span><span class="flow_comma">,</span><span class="comment">
+</span><span class="indent">  </span><span class="flowseq_end">]</span><span class="flow_comma">,</span><span class="comment"> # Trailing Commas!
+</span><span class="flowmap_end">}</span><span class="comment">
+</span>
+
+
+</div>
+</div>
+<script type="text/javascript">
+register_animation('node_3', 2, 'greyin', {});
+register_animation('node_4', 3, 'greyin', {});
+register_animation('node_5', 2, 'appear', {});
+register_animation('node_8', 3, 'appear', {});
+
+var prev_page = 'slide010.html';
+var next_page = 'slide012.html';
+</script>
+<div id="bbslides-navi">
+Slide 11/35
+<a href="slide010.html" onclick="previous_step();return false">BACK</a>
+<a href="index.html">UP</a>
+<a href="slide012.html" onclick="next_step(); return false">NEXT</a>
+<span id="usage">next: ( space / -&gt; / page up ) | previous: ( backspace / &lt;- / page down ) |
+next page: ( shift + page down ) | previous page: ( shift + page up ) |
+index: ( arrow-up )</span>
+
+<br>
+<progress id="slide-progress" value="11" max="35"></progress>
+</div>
+</body>
+</html>
