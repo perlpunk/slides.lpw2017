@@ -1,0 +1,229 @@
+---
+title: YAML::PP - Just another YAML™ Module?
+content: |
+  [title][/title]
+  [list]
+  [*]Where: London Perl Workshop
+  [*]When: November 25th 2017
+  [*]Author: Tina Müller
+  [/list]
+
+---
+title: Perl YAML Modules
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]YAML.pm
+  [*]YAML::Syck
+  [*]YAML::XS
+  [*]YAML::Tiny
+  [*]Do we need another one? I believe so:
+  [*]YAML::PP
+  [/list]
+
+---
+title: I love Colors
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]Ingy, one of the creators of YAML, wrote a nice commandline tool for the Github API
+  [*]At the beginning of 2016, it looked like that:
+  [/list]
+
+---
+title: git hub 2016
+content: |
+  [title][/title]
+  [codeboxsmall][include="git-hub-repo1.ansi.html"][/codeboxsmall]
+  [codeboxsmall][include="git-hub-pr-queue1.ansi.html"][/codeboxsmall]
+
+---
+title: git hub 2017
+content: |
+  [title][/title]
+  [codeboxsmall][include="git-hub-repo2.ansi.html"][/codeboxsmall]
+  [codeboxsmall][include="git-hub-pr-queue2.ansi.html"][/codeboxsmall]
+
+---
+title: Pegex.pm
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]Ingy also wrote Pegex.pm, a module for parsing
+  [*]In 2016, the debugging output looked like this:
+  [/list]
+
+---
+title: Pegex.pm 2016
+content: |
+  [title][/title]
+  [codeboxsmall][include="pegex-debug1.ansi.html"][/codeboxsmall]
+
+---
+title: Pegex 2017
+content: |
+  [title][/title]
+  [codeboxsmall][include="pegex-debug2.ansi.html"][/codeboxsmall]
+
+
+---
+title: Which one of these YAML files is invalid?
+content: |
+  [title][/title]
+  [codebox][include="yaml-ok.yaml"][/codebox]
+  [codebox][include="yaml-invalid.yaml"][/codebox]
+
+---
+title: Which one of these YAML files is invalid?
+content: |
+  [title][/title]
+  [codebox][include="yaml-ok.yaml.html"][/codebox]
+  [codebox][include="yaml-invalid.yaml.html"][/codebox]
+
+---
+title: You can do that on command line, too
+content: |
+  [title][/title]
+  [codebox][include="yamlpp-highlight.ansi.html"][/codebox]
+
+---
+title: How does YAML::PP work?
+content: |
+  [title][/title]
+
+---
+title: YAML::PP Lexer
+content: |
+  [title][/title]
+  [list]
+  [*]The Lexer turns the input into Tokens:
+  [/list]
+  [codebox][include="yamlpp-trace.ansi.html"][/codebox]
+
+---
+title: YAML::PP Grammar
+content: |
+  [title][/title]
+  [list]
+  [*]The Tokens are passed to a bottom-up Grammar:
+  [/list]
+  [codebox][include="yamlpp-grammar.ansi.html"][/codebox]
+
+
+---
+title: YAML::PP Parser
+content: |
+  [title][/title]
+  [list]
+  [*]The Parser then creates events like:
+  [*]SequenceStart
+  [*]Scalar "Lorem"
+  [*]MappingStart
+  [*]Scalar "ipsum"
+  [*]Scalar "..."
+  [*]MappingEnd
+  [*]SequenceEnd
+  [/list]
+
+---
+title: YAML::PP Constructor
+content: |
+  [title][/title]
+  [list]
+  [*]The Constructor takes the events and creates a data structure
+  [/list]
+
+---
+title: YAML Loading Process
+content: |
+  [title][/title]
+
+  [list animation="1,greyin"]
+  [*]Other processors have the same Event API:
+  [*]C libyaml
+  [*]Python PyYAML
+  [*]Python ruamel
+  [*]C++ yaml-cpp
+  [*]Java SnakeYAML
+  [*]NimYAML
+  [*]And now, we also have a Pure Perl Module that works this way
+  [/list]
+
+---
+title: The Grammar
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]I'm not aware of a YAML Parser that uses a Grammar so far
+  [*]Ingy started a Pegex grammar for YAML, but it needs more work
+  [*]Having a Grammar makes it easier to port
+  [*]Of course one still has to implement the Lexer and the Callbacks
+  [*]But figuring out the Grammar is one of the hardest parts
+  [*]So I (or you!) could take the Grammar and port YAML::PP to Perl6, Go, ...
+  [/list]
+
+---
+title: Future
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]Create a DOM:
+  [*]Allow to roundtrip including comments
+  [*]Transform YAML 1.1 documents into YAML 1.2
+  [*]Create a Schema:
+  [*]Allow to control creating objects
+  [/list]
+
+---
+title: YAML Local Tags in Perl
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]So called local tags are always loaded into objects with YAML::XS and YAML::Syck
+  [*]A local tag starts with one "!"
+  [/list]
+  [codebox animation="5,appear"][include="local.yaml.html"]
+  
+  
+  
+  [/codebox]
+  [codebox animation="6,appear"][include="local.pl"][/codebox]
+
+---
+title: YAML Local Tags in Perl
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]And there's no way to control it or even turn it off!
+  [/list]
+
+---
+title: YAML Local Tags in PyYAML
+content: |
+  [title][/title]
+  [list animation="1,greyin"]
+  [*]In PyYAML you have to register each local tag
+  [*]But you can do also fancy stuff
+  [*]Load objects that match a certain Regex
+  [/list]
+  [codebox animation="5,appear"][include="local-pyyaml.yaml.html"][/codebox]
+
+---
+title: And just because I love colors...
+content: |
+  [title][/title]
+  [list]
+  [*]Have a look at the YAML Test Matrix I created: [url=http://matrix.yaml.io/]http://matrix.yaml.io[/url]
+  [*]It shows 16 YAML processors tested against the YAML Test Suite
+  [/list]
+
+---
+title: YAML Test Matrix
+content: |
+  [title][/title]
+  [h1][img=yaml-test-matrix-overview.png][/img][/h1]
+
+---
+title: Thanks!
+content: |
+  [title][/title]
