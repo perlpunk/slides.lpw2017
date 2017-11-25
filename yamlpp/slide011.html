@@ -19,12 +19,7 @@
 -->
 <div id="bbslides-slide" class="bbslides-frame">
 <h1 id="node_1" class="bbslides-h1">You can do that on command line, too</h1>
-<div id="node_2" class="codebox"><span class="">%
-%
-%
-%
-%
-% </span><span class="green">yamlpp5-highlight</span><span class=""> </span><span class="underline">data/example.yaml
+<div id="node_2" class="codebox"><span class="">% </span><span class="green">yamlpp5-highlight</span><span class=""> </span><span class="underline">data/example.yaml
 </span><span class="bold">---
 </span><span class="bold magenta">-</span><span class=""> list
 </span><span class="bold magenta">-</span><span class=""> items
@@ -33,6 +28,23 @@
 </span><span class="bold magenta">-</span><span class=""> </span><span class="bold magenta">{</span><span class=""> flow</span><span class="bold magenta">:</span><span class=""> mapping </span><span class="bold magenta">}
 
 </span><span class="">%
+</span>
+</div>
+<div id="node_4" class="codebox"><span class="">% </span><span class="green">yamlpp5-highlight</span><span class=""> </span><span class="underline">data/invalid.yaml
+</span><span class="bold">---
+</span><span class="bold magenta">-</span><span class=""> list
+</span><span class="bold magenta">-</span><span class=""> items
+</span><span class="bold magenta">-</span><span class=""> key 1</span><span class="bold magenta">:</span><span class=""> one
+  key 2</span><span class="bold magenta">:</span><span class=""> two
+</span><span class="bold magenta">-</span><span class=""> </span><span class="bold magenta">[</span><span class=""> flow</span><span class="bold magenta">,</span><span class=""> sequence </span><span class="bold red">}
+- [ another ]
+
+</span><span class="">Line      : 6
+Message   : Expected (EOL FLOWSEQ_END FLOW_COMMA WS), but got FLOWMAP_END
+Where     : /home/tina/develop/github/YAML-PP-p5/lib/YAML/PP/Parser.pm line 487
+YAML      : &quot;}&quot;
+  at /home/tina/develop/github/YAML-PP-p5/lib/YAML/PP/Loader.pm line 52.
+%
 </span>
 </div>
 </div>

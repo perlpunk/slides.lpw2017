@@ -85,6 +85,7 @@ title: You can do that on command line, too
 content: |
   [title][/title]
   [codebox][include="yamlpp-highlight.ansi.html"][/codebox]
+  [codebox][include="yamlpp-highlight2.ansi.html"][/codebox]
 
 ---
 title: How does YAML::PP work?
