@@ -157,6 +157,7 @@ content: |
   [list animation="1,greyin"]
   [*]I'm not aware of a YAML Parser that uses a Grammar so far
   [*]Ingy started a Pegex grammar for YAML, but it needs more work
+  [*]Leon Timmermans started YAMLish, which works with Perl 6 Grammars; it also needs more work
   [*]Having a Grammar makes it easier to port
   [*]Of course one still has to implement the Lexer and the Callbacks
   [*]But figuring out the Grammar is one of the hardest parts
